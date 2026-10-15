@@ -46,13 +46,13 @@ PORT=5000
 MONGO_URI=your_mongodb_connection_string
 SESSION_SECRET=your_express_session_secret_key
 CHAPA_SECRET_KEY=CHASECK_TEST-xxxxxxxxxxxxxxxxxxxx
-FRONTEND_URL=http://localhost:3000
+FRONTEND_URL=http://localhost:5173
 ```
 
 #### Frontend Configuration
 Create a `.env` file inside the `frontend/` directory:
 ```env
-REACT_APP_API_BASE_URL=http://localhost:5000/api
+REACT_APP_API_BASE_URL=http://localhost:3000/api
 REACT_APP_CHAPA_PUBLIC_KEY=CHAPUBK_TEST-xxxxxxxxxxxxxxxxxxxx
 ```
 
