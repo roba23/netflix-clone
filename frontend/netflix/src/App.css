@@ -1,0 +1,110 @@
+
+@import "tailwindcss" ;
+@theme{
+    --breakpoint-md: 960px;
+    --breakpoint-lg: 1280px;
+}
+
+*{
+  box-sizing: border-box;
+}
+body{
+  margin: 0;
+  padding: 0;
+  background: rgb(0,0,0)
+
+}
+
+.input-group{
+  display: flex;
+  position: relative;
+  box-shadow: none;
+  
+  z-index: 20;
+  
+
+}
+
+
+
+
+.input-group label{
+  color: grey;
+  position:absolute;
+  left: 12px;
+  top: 8px;
+  font-size: 18px;
+  
+}
+.input-group input:focus + label,
+.input-group input:not(:placeholder-shown) + label{
+  font-size: 10px;
+  top: 0px;
+}
+
+ .curve-container {
+    box-sizing: border-box;
+    overflow-x: hidden;
+    position: relative;
+    height: 6.25rem;
+    margin-top: -10px;
+    z-index: 10;
+}
+
+    .curve {
+        width: 130%;
+        left: -15%;
+    }
+.curve-container{
+  margin-top: -10px;
+}
+@media (min-width: 960px) {
+    .curve {
+        width: 150%;
+        left: -25%;
+    }
+}
+@media (min-width: 600px) {
+    .curve {
+        width: 180%;
+        left: -40%;
+    }
+}
+.curve {
+    width: 200%;
+    left: -50%;
+}
+.curve {
+    box-sizing: border-box;
+    position: absolute;
+    height: 100%;
+    top: 0;
+    margin: auto;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border: solid .25rem transparent;
+    border-top-left-radius: 50% 100%;
+    border-top-right-radius: 50% 100%;
+    border-bottom: none;
+    background: radial-gradient(50% 500% at 50% -420%, rgba(64, 97, 231, 0.4) 80%, rgba(0, 0, 0, 0.1) 100%), black;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+}
+.curve::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    margin-top: -.25rem;
+    border-radius: inherit;
+    background: linear-gradient(to right, rgba(33, 13, 22, 1) 16%, rgba(184, 40, 105, 1), rgba(229, 9, 20, 1), rgba(184, 40, 105, 1), rgba(33, 13, 22, 1) 84%);
+}

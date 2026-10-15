@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Add movie</title>
+    </head>
+    <body>
+        <form action = "/movie/add" method="post" enctype="multipart/form-data">
+            <label>Movie name:
+                <input type="text" name="name"/>
+            </label>
+            <label>release date:
+                <input type="date" name="date"/>
+            </label>
+            <label>description:
+                <textarea type="text" name="description" placeholder="Enter movie description"></textarea>
+            </label>
+            <label>Picture:
+                <input name="image" type="file" accept="image/*" />
+            </label>
+            <label>Genre:
+                <select name="genre">
+                    <option disabled>Choose one Genre</option>
+                    <option value="Action">Action</option>
+                    <option value="Comedy">comedy</option>
+                    <option value="Crime">Crime</option>
+                    <option value="Drama">Drama</option>
+                    <option value="Fantasy">Fantasy</option>
+                    <option value="Horror">Horror</option>
+                    <option value="Mystery">Mystery</option>
+                    <option value="Romance">Romance</option>
+                    <option value="Science Fiction">Science Fiction</option>
+                    <option value="Thriller">Thriller</option>
+                    <option value="Western">Western</option>
+                </select>                
+            </label>
+              <label>Trailer link:
+                    <input type="text" name="trailer">
+                </label>
+            <input type="submit">
+        </form>
+        
+    </body>
+</html>
