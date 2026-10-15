@@ -1,4 +1,3 @@
-markdown
 # Netflix Clone (MERN Stack)
 
 A full-stack **Netflix Clone** built using the **MERN** (MongoDB, Express, React, Node.js) stack. This application replicates core streaming platform functionalities, including session-based user authentication, content discovery, movie searching, and a premium tiered subscription model integrated with the [Chapa Payment API](https://chapa.co).
