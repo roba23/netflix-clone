@@ -1,6 +1,6 @@
 import { Navigation } from "../components/Navigation.jsx"
 import { useEffect , useState, useRef} from "react"
-import {motion, AnimatePresence} from "framer-motion"
+
 import Footer from "../components/Footer.jsx"
 import "../App.css"
 import data from "./data.js"
