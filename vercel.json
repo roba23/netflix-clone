@@ -3,11 +3,13 @@
   "services": {
     "backend": {
       "root": "backend",
-      "framework": "express"
+      "framework": "express",
+      "entrypoint": "index.js"
     },
     "netflix": {
       "root": "frontend/netflix",
       "framework": "vite",
+      "entrypoint": "vite",
       "bindings": [
         {
           "type": "service",
