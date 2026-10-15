@@ -6,6 +6,7 @@ export function Navigation(prop){
     const [searchTerm, setSearchTerm] = React.useState("")
     const navigation = useNavigate()
     console.log("prop inside navigation:" ,prop)
+   
      React.useEffect(()=>{
         const userData = async () => {
         try{
