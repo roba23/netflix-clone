@@ -24,16 +24,22 @@ const allowedOrigins = [
 
 app.use(cors({
     origin: function (origin, callback) {
-        // Allow requests with no origin (like mobile apps or curl)
+        // Allow requests with no origin (like mobile apps, curl, or Postman)
         if (!origin) return callback(null, true);
-        if (allowedOrigins.indexOf(origin) === -1 && process.env.NODE_ENV === 'production') {
-            return callback(new Error('CORS policy violation'), false);
+
+        // Check if origin is localhost, or ends with .vercel.app
+        const isLocalhost = origin.startsWith('http://localhost:');
+        const isVercelDomain = origin.endsWith('.vercel.app');
+        const isWhitelisted = allowedOrigins.includes(origin);
+
+        if (isLocalhost || isVercelDomain || isWhitelisted) {
+            return callback(null, true);
+        } else {
+            return callback(new Error('Not allowed by CORS'));
         }
-        return callback(null, true);
     },
-    methods: ['GET', 'POST', 'PUT', 'DELETE'],
     credentials: true,
-}))
+}));
 
 app.use(session({
     secret: process.env.SECRET_KEY,
