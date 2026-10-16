@@ -52,7 +52,12 @@ export default {
     async logout(req,res){
        console.log("reached the logout")
         req.session.destroy()
-        res.clearCookie('robflix')
+        res.clearCookie('robflix',{
+            path: '/',
+                secure: process.env.NODE_ENV === 'production',
+                httpOnly: true,
+                sameSite: process.env.NODE_ENV === 'production' ? 'none' : 'lax'
+        })
         res.json({
             success: true
         })
