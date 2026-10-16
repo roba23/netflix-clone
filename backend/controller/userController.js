@@ -85,8 +85,8 @@ export default {
         let callbackUrl;
         try{
             if(process.env.NODE_ENV === 'production'){
-              redirectUrl = 'https://netflix-clone-2yxk.vercel.app'
-              callbackUrl = 'https://netflix-clone-2yxk.vercel.app/user/checkPayment'
+              redirectUrl = 'https://netflix-clone-2yxk.vercel.app/subscribed'
+              callbackUrl = 'https://netflix-clone-sooty-ten-52.vercel.app/user/checkPayment'
              }
              else{
                 redirectUrl = 'http://localhost:5173/subscribed'
@@ -98,8 +98,8 @@ export default {
                 currency: "ETB",
                 amount: "999",
                 tx_ref: custom_ref,
-                callback_url: "https://localhost:3000/user/checkPayment",
-                return_url: process.env.NODE_ENV === 'production'? 'https://netflix-clone-2yxk.vercel.app': 'http://localhost:5173/subscribed'
+                callback_url: callbackUrl,
+                return_url: redirectUrl
                 ,customization:{
                     logo: "https://res.cloudinary.com/n4ucymig/image/upload/v1792055871/logo.png",
                     title: "Robflix"
