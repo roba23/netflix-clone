@@ -10,7 +10,7 @@ export function Navigation(prop){
      React.useEffect(()=>{
         const userData = async () => {
         try{
-            const response = await fetch(`${import.meta.env.VITE_API_URL}/user/checkStatus`,
+            const response = await fetch(`/api/user/checkStatus`,
                 {
                     method: "GET", 
                     credentials: "include"
@@ -41,7 +41,7 @@ export function Navigation(prop){
     }, [prop.where])
     async function logout(){
         try{
-        const response = await fetch(`${import.meta.env.VITE_API_URL}/user/logout`)
+        const response = await fetch(`/api/user/logout`)
         
         if(response.ok){
             const data = await response.json()
