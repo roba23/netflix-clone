@@ -6,7 +6,7 @@ export function Navigation(prop){
     const [searchTerm, setSearchTerm] = React.useState("")
     const navigation = useNavigate()
 
-   
+    console.log("On navigation:",)
      React.useEffect(()=>{
         const userData = async () => {
         try{
@@ -24,14 +24,15 @@ export function Navigation(prop){
                     prop.func(data)
                     navigation("/movies")
                 }
-                else{
-                   
+               
+                 
                 
-                    
-                }
                 
                 
             }
+             else{
+                    prop.func({success: false, username: null, status: null})
+                }
         }
         catch(error){
             console.error()

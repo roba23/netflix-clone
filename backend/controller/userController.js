@@ -63,8 +63,9 @@ export default {
                 maxAge: 0,          // Expires instantly
                 path: '/',
                 httpOnly: true,
-                secure: true,       // Required for Vercel HTTPS
-                sameSite: 'none'    // Required for cross-subdomain requests
+                secure: process.env.NODE_ENV === 'production', 
+    // 'none' is required for cross-site Vercel domains, 'lax' works best locally
+    sameSite: process.env.NODE_ENV === 'production' ? 'none' : 'lax',
             });
 
             return res.status(200).json({ success: true, message: "Logged out successfully" });

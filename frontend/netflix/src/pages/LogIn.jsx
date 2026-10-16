@@ -62,7 +62,7 @@ async function registerHandler(formData){
       if(response.ok){
         const data = await response.json();
         
-       prop.func(data.username)
+       prop.func(data)
         navigate("/movies")
       }
       else{

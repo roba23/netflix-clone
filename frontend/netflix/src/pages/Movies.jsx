@@ -54,6 +54,9 @@ export default function Movies(prop){
                     
                 }
         }
+        else{
+            setisLoading(false)
+        }
        
     
     }, [search,prop.user, paymentForm])
