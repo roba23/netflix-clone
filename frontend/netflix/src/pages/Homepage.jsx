@@ -141,10 +141,10 @@ export function Homepage(prop){
                 </form>
 
             </div>
-            <img className="overflow-hidden mt-[-70px] lg:mt-[-68px] relative z-0 top-0 left-0 w-[100%] h-[100vh] object-cover" src="./src/assets/main_image.jpg" 
-                srcSet="./src/assets/image1.jpg 2000w,
-                ./src/assets/image2.jpg 1279w,
-                ./src/assets/image3.jpg 959w"/>
+            <img className="overflow-hidden mt-[-70px] lg:mt-[-68px] relative z-0 top-0 left-0 w-[100%] h-[100vh] object-cover" src="https://res.cloudinary.com/n4ucymig/image/upload/v1792136560/main_image.jpg" 
+                srcSet="https://res.cloudinary.com/n4ucymig/image/upload/v1792136559/image1.jpg 2000w,
+                https://res.cloudinary.com/n4ucymig/image/upload/v1792136559/image2.jpg 1279w,
+                https://res.cloudinary.com/n4ucymig/image/upload/v1792136558/image3.jpg 959w"/>
             
 
             
@@ -261,22 +261,22 @@ export function Homepage(prop){
                         <InfoCard 
                         header="Enjoy on your TV"
                         text="Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV, Blu-ray players, and more."
-                        imgUrl="./src/assets/tv.svg"
+                        imgUrl="https://res.cloudinary.com/n4ucymig/image/upload/v1792136560/tv.svg"
                          />
                           <InfoCard 
                         header="Download your shows to watch offline"
                         text="Save your favorites easily and always have something to watch."
-                        imgUrl="./src/assets/download.svg"
+                        imgUrl="https://res.cloudinary.com/n4ucymig/image/upload/v1792136557/download.svg"
                          />
                          <InfoCard 
                         header="Watch everywhere"
                         text="Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV."
-                        imgUrl="./src/assets/telescope.svg"
+                        imgUrl="https://res.cloudinary.com/n4ucymig/image/upload/v1792136559/telescope.svg"
                          />
                          <InfoCard 
                         header="Create profiles for kids"
                         text="Send kids on adventures with their favorite characters in a space made just for them — free with your membership."
-                        imgUrl="./src/assets/profile.svg"
+                        imgUrl="https://res.cloudinary.com/n4ucymig/image/upload/v1792136559/profile.svg"
                          />
                     </div>
                     <div className={`

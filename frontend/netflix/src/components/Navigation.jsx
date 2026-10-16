@@ -88,7 +88,7 @@ export function Navigation(prop){
                 h-[40px]
                 lg:w-[150px]
                 lg:h-[50px]
-                `} src="/src/assets/logo.png" width="100px"/>
+                `} src="https://res.cloudinary.com/n4ucymig/image/upload/v1792055871/logo.png" width="100px"/>
             </Link>
             
             {prop.where !== "/login" && (!prop.user  || !prop.user.success)  ?<Link to="/login">
@@ -148,7 +148,7 @@ export function Navigation(prop){
                         `}><img className={`
                             h-[25px]
                             object-cover
-                        `} src="src/assets/search.svg" 
+                        `} src="https://res.cloudinary.com/n4ucymig/image/upload/v1792136559/search.svg" 
                         type="submit"
                         /></button>
                 </form>
