@@ -54,9 +54,9 @@ app.use(session({
     cookie: {
         path: '/',
         maxAge: 24 * 60 * 60 * 1000, // 24 hours in milliseconds
-        secure: process.env.NODE_ENV === 'production', // MUST be true on Vercel (HTTPS)
+        secure: true,
         httpOnly: true,
-        sameSite: process.env.NODE_ENV === 'production' ? 'none' : 'lax' 
+        sameSite: 'none'
     },
     name: "robflix"
 }));
