@@ -89,7 +89,7 @@ export default {
                 amount: "999",
                 tx_ref: custom_ref,
                 callback_url: "https://m9vpgb7m-3000.inc1.devtunnels.ms/user/checkPayment",
-                return_url: process.env.NODE_ENV === 'production'? 'https://netflix-clone-2yxk.vercel.app/user/subscribed': 'http://localhost:5173/subscribed'
+                return_url: process.env.NODE_ENV === 'production'? 'https://netflix-clone-2yxk.vercel.app': 'http://localhost:5173/subscribed'
                 ,customization:{
                     logo: "https://res.cloudinary.com/n4ucymig/image/upload/v1792055871/logo.png",
                     title: "Robflix"
