@@ -5,7 +5,7 @@ import React from 'react'
 export function Navigation(prop){
     const [searchTerm, setSearchTerm] = React.useState("")
     const navigation = useNavigate()
-    console.log("prop inside navigation:" ,prop)
+
    
      React.useEffect(()=>{
         const userData = async () => {
@@ -18,15 +18,14 @@ export function Navigation(prop){
             );
             if(response.ok){
                 const data = await response.json()
-                console.log("after checking user status:", data)
+                
                 if(data.success){
-                    console.log("user logged in found")
-                    console.log("navigation data is:", data)
+                    
                     prop.func(data)
                     navigation("/movies")
                 }
                 else{
-                    console.log("no user found")
+                   
                 
                     
                 }
@@ -43,7 +42,7 @@ export function Navigation(prop){
     async function logout(){
         try{
         const response = await fetch(`${import.meta.env.VITE_API_URL}/user/logout`)
-        console.log("response inside logout function is:", response)
+        
         if(response.ok){
             const data = await response.json()
             console.log("data inside logout  is:", data)

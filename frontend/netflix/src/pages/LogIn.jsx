@@ -14,9 +14,9 @@ export default function LogIn(prop){
 async function registerHandler(formData){
     const result = Object.fromEntries(formData)
     
-    console.log("form data is:", result)
+    
     if(result.password != result.confirmPassword){
-        console.log("mismatch password")
+        
         return
     }
     try{
@@ -31,7 +31,7 @@ async function registerHandler(formData){
       
       if(response.ok){
         const data = await response.json();
-        console.log("success:", data)
+        
         prop.func(data)
         navigate("/")
 
@@ -49,7 +49,7 @@ async function registerHandler(formData){
 
   async function logInHandler(formData){
     const result = Object.fromEntries(formData)
-    console.log("form data is:", result)
+  
     try{
       const response = await fetch(`${import.meta.env.VITE_API_URL}/user/login`,{
         method: 'POST',
@@ -61,7 +61,7 @@ async function registerHandler(formData){
       });
       if(response.ok){
         const data = await response.json();
-        console.log("success:", data)
+        
        prop.func(data.username)
         navigate("/movies")
       }
