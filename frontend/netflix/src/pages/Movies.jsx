@@ -65,7 +65,7 @@ export default function Movies(prop){
        e.currentTarget.disabled = true;
         console.log("clicked me")
         try{
-            const response = await fetch(`api/user/subscribe`)
+            const response = await fetch(`${import.meta.env.VITE_API_URL}/api/user/subscribe`)
             if(response.ok){
                 const data = await response.json()
                 

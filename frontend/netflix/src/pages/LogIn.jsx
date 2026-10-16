@@ -21,7 +21,7 @@ async function registerHandler(formData){
     }
     try{
       
-      const response = await fetch("/api/user/register",{
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/user/register`,{
         method: 'POST',
         headers:{
           'Content-Type': 'application/json',
@@ -51,7 +51,7 @@ async function registerHandler(formData){
     const result = Object.fromEntries(formData)
     console.log("form data is:", result)
     try{
-      const response = await fetch("/api/user/login",{
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/user/login`,{
         method: 'POST',
         headers:{
           'Content-Type': 'application/json',
