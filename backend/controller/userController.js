@@ -50,7 +50,6 @@ export default {
     },
     
     async logout(req, res, next) {
-    (req, res, next) => {
     req.logout((err) => {
         if (err) return next(err);
 
@@ -59,18 +58,21 @@ export default {
                 return res.status(500).json({ success: false, message: "Could not log out" });
             }
 
-            // 👇 Explicitly clear the 'robflix' cookie with matching Vercel production attributes
-            res.clearCookie('robflix', {
+            // 👇 Forcefully overwrite and expire the cookie immediately
+            res.cookie('robflix', '', {
+                maxAge: 0,          // Expires instantly
                 path: '/',
                 httpOnly: true,
-                secure: true,        // Must be true on Vercel production HTTPS
-                sameSite: 'none'     // Must be 'none' for cross-subdomain requests
+                secure: true,       // Required for Vercel HTTPS
+                sameSite: 'none'    // Required for cross-subdomain requests
             });
 
             return res.status(200).json({ success: true, message: "Logged out successfully" });
         });
     });
-};
+
+
+
 },
     async subscribe(req,res){
         const tx_ref = chapa.genTxRef()
