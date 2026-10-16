@@ -10,7 +10,7 @@ export function Navigation(prop){
      React.useEffect(()=>{
         const userData = async () => {
         try{
-            const response = await fetch(`${import.meta.env.VITE_API_URL}/api/user/checkStatus`,
+            const response = await fetch(`${import.meta.env.VITE_API_URL}/user/checkStatus`,
                 {
                     method: "GET", 
                     credentials: "include"
