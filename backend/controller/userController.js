@@ -49,19 +49,27 @@ export default {
         
     },
     
-    async logout(req,res){
-       console.log("reached the logout")
-        req.session.destroy()
-        res.clearCookie('robflix',{
-            path: '/',
-                secure: true,
+    async logout(req, res, next) {
+    req.logout((err) => {
+        if (err) return next(err);
+
+        req.session.destroy((err) => {
+            if (err) {
+                return res.status(500).json({ success: false, message: "Could not log out" });
+            }
+
+            // 👇 Explicitly clear the 'robflix' cookie with matching Vercel production attributes
+            res.clearCookie('robflix', {
+                path: '/',
                 httpOnly: true,
-                sameSite: none,
-        })
-        res.json({
-            success: true
-        })
-    },
+                secure: true,        // Must be true on Vercel production HTTPS
+                sameSite: 'none'     // Must be 'none' for cross-subdomain requests
+            });
+
+            return res.status(200).json({ success: true, message: "Logged out successfully" });
+        });
+    });
+},
     async subscribe(req,res){
         const tx_ref = chapa.genTxRef()
         const user = req.user
