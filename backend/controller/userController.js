@@ -50,6 +50,7 @@ export default {
     },
     
     async logout(req, res, next) {
+    (req, res, next) => {
     req.logout((err) => {
         if (err) return next(err);
 
@@ -69,6 +70,7 @@ export default {
             return res.status(200).json({ success: true, message: "Logged out successfully" });
         });
     });
+};
 },
     async subscribe(req,res){
         const tx_ref = chapa.genTxRef()
