@@ -12,21 +12,21 @@ export default function Movies(prop){
     const searchQuery = searchParams.get('search') || ''
     const [search, setSearch] = React.useState(searchQuery)
     
-    console.log("movies prop:", prop)
+  
     if((searchQuery !== search) && (searchQuery != '')){
-        console.log("the thing is different ")
+        
         setisLoading(true)
         setSearch(searchQuery)
     }
     React.useEffect(()=>{
-        console.log("Right here baby")
+       
         const movieData = async()=>{
             try{
                 
                 const response = await fetch(`${import.meta.env.VITE_API_URL}/movie/getMovie?search=${searchQuery}`)
                 if(response.ok){
                     const data = await response.json()
-                    console.log("the data is:", data)
+                   
                     setMovies(data.data)
 
                 }
@@ -39,12 +39,12 @@ export default function Movies(prop){
                 setisLoading(false)
             }
         }
-        console.log("data before the if:", prop)
+        
         if(prop.user.success)
             {
 
                 if(prop.user.status.subscription && (new Date(prop.user.status["expiration"]) > new Date())){
-                    console.log("i am getting movie data")
+                    
                     movieData();
                     setPaymentForm(false)
                 }
@@ -63,7 +63,7 @@ export default function Movies(prop){
     
     async function subscribe(e){
        e.currentTarget.disabled = true;
-        console.log("clicked me")
+      
         try{
             const response = await fetch(`${import.meta.env.VITE_API_URL}/user/subscribe`)
             if(response.ok){
