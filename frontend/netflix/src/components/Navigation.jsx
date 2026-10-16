@@ -18,7 +18,7 @@ export function Navigation(prop){
             );
             if(response.ok){
                 const data = await response.json()
-                
+                console.log("data at navigation is:", data)
                 if(data.success){
                     
                     prop.func(data)
