@@ -61,7 +61,7 @@ configurePassport(passport);
 
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(express.static("public"))
-app.use("/api", router)
+app.use("", router)
 
 app.get("/", async (req, res) => {
     res.send("Hello World from Vercel Serverless Backend!")
