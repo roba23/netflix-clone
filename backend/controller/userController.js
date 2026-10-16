@@ -81,14 +81,24 @@ export default {
         console.log("user id:", user._id)
         console.log("the ref is:", tx_ref)
         const custom_ref = req.user._id.toString() + '_' + tx_ref
+        let redirectUrl;
+        let callbackUrl;
         try{
+            if(process.env.NODE_ENV === 'production'){
+              redirectUrl = 'https://netflix-clone-2yxk.vercel.app'
+              callbackUrl = 'https://netflix-clone-2yxk.vercel.app/user/checkPayment'
+             }
+             else{
+                redirectUrl = 'http://localhost:5173/subscribed'
+                callbackUrl = 'http://localhost:3000/user/checkPayment'
+             } 
             const response = await chapa.initialize({
                 first_name: user.username,
                 email: user.email,
                 currency: "ETB",
                 amount: "999",
                 tx_ref: custom_ref,
-                callback_url: "https://m9vpgb7m-3000.inc1.devtunnels.ms/user/checkPayment",
+                callback_url: "https://localhost:3000/user/checkPayment",
                 return_url: process.env.NODE_ENV === 'production'? 'https://netflix-clone-2yxk.vercel.app': 'http://localhost:5173/subscribed'
                 ,customization:{
                     logo: "https://res.cloudinary.com/n4ucymig/image/upload/v1792055871/logo.png",
