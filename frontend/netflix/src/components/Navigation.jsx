@@ -45,7 +45,7 @@ export function Navigation(prop){
         const response = await fetch(`${import.meta.env.VITE_API_URL}/user/logout`)
         if(response.ok){
             const data = await response.json()
-            console.log("data is:", data)
+            console.log("data inside logout  is:", data)
             if(data.success){
                 prop.func({success: false, username: null, status: null})
                 navigation("/")

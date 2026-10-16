@@ -23,7 +23,7 @@ export default function Movies(prop){
         const movieData = async()=>{
             try{
                 
-                const response = await fetch(`/movie/getMovie?search=${searchQuery}`)
+                const response = await fetch(`${import.meta.env.VITE_API_URL}/movie/getMovie?search=${searchQuery}`)
                 if(response.ok){
                     const data = await response.json()
                     console.log("the data is:", data)
