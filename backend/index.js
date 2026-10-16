@@ -19,7 +19,7 @@ app.use(express.json())
 // Dynamic CORS for local development and Vercel production
 const allowedOrigins = [
     'http://localhost:5173',
-    process.env.FRONTEND_URL // Add your live Vercel frontend URL here later
+    'https://netflix-clone-2yxk.vercel.app' // Add your live Vercel frontend URL here later
 ];
 
 app.use(cors({
