@@ -2,7 +2,7 @@
   "rewrites": [
     {
       "source": "/api/:match*",
-      "destination": "https://netflix-clone-sooty-ten-52.vercel.app/api/:match*"
+      "destination": "https://netflix-clone-sooty-ten-52.vercel.app/:match*"
     },
     {
       "source": "/(.*)",
