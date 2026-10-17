@@ -28,7 +28,7 @@ export default {
                 if(err){
                     return next(err)
                 }
-                return res.json("fuck me men")
+                return res.json("login Sucess")
             })
             console.log("the result is:", result)
             
