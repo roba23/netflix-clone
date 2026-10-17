@@ -144,11 +144,8 @@ export function Homepage(prop){
                 </form>
 
             </div>
-            <img className="overflow-hidden mt-[-70px] lg:mt-[-68px] relative z-0 top-0 left-0 w-[100%] h-[100vh] object-cover" src="https://res.cloudinary.com/n4ucymig/image/upload/v1792136560/main_image.jpg" 
-                srcSet="https://res.cloudinary.com/n4ucymig/image/upload/v1792136559/image1.jpg 2000w,
-                https://res.cloudinary.com/n4ucymig/image/upload/v1792136559/image2.jpg 1279w,
-                https://res.cloudinary.com/n4ucymig/image/upload/v1792136558/image3.jpg 959w"/>
-            
+            <img className="overflow-hidden mt-[-70px] lg:mt-[-68px] relative z-0 top-0 left-0 w-[100%] h-[100vh] object-cover" src="https://res.cloudinary.com/n4ucymig/image/upload/v1792266266/landing_page.jpg" />
+                
 
             
                 
