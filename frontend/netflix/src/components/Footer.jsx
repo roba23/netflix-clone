@@ -10,12 +10,14 @@ export default function(){
         
         underline
         `}>
+          
           <p>FAQ</p>
           <p>Terms of Use</p>
           <p>Cookie Preferences</p>
           <p>Help Center</p>
           <p>Privacy</p>
           <p>corporate Information</p>
+          
 
       </footer>
     )

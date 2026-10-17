@@ -190,6 +190,21 @@ export default function Movies(prop){
 
                 
         </div>
+        <div className={`
+                   text-[rgb(159,159,159)] 
+                   mt-[2vh]
+                    pl-[10vw]
+                    w-full
+                    pt-2
+                    pb-5
+                    bg-[rgb(25,25,25)]
+                `} >
+                <h3 className={`
+                 
+                    underline`}>Disclaimer</h3>
+                <p>This is a non-commercial, personal portfolio project built purely for educational purposes. This website is not affiliated with, authorized, or endorsed by Netflix. No real user data or payment information is processed or stored</p>
+                <Footer />
+                </div>
        
             
 

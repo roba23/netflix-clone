@@ -270,6 +270,8 @@ async function registerHandler(formData){
       pb-[30px]
       text-[rgb(159,159,159)] 
       `}>
+      <p className="underline">Disclaimer</p>
+      <p>This is a non-commercial, personal portfolio project built purely for educational purposes. This website is not affiliated with, authorized, or endorsed by Netflix. No real user data or payment information is processed or stored</p>
       <p className={`
         
         

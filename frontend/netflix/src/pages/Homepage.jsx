@@ -92,10 +92,10 @@ export function Homepage(prop){
                 <h3 className={`
                     lg:font-bold
                     lg:text-[18px]
-                    `}>Starts at USD 2.99. cancel anytime.</h3>
+                    `}>Disclaimer.</h3>
                 <h3 className={`
                     lg:text-[18px]
-                    `}>Ready to watch? Enter your email to create or restart your memebership</h3>
+                    `}>This is a non-commercial, personal portfolio project built purely for educational purposes. This website is not affiliated with, authorized, or endorsed by Netflix. No real user data or payment information is processed or stored</h3>
                 <div className={`
                     flex
                     w-[100%]
@@ -363,6 +363,10 @@ export function Homepage(prop){
                     pt-2
                     pb-5
                 `} >
+                <p className={`
+                    text-white
+                    `}>DISCLAIMER: This is a non-commercial, personal portfolio project built purely for educational purposes. This website is not affiliated with, authorized, or endorsed by Netflix. No real user data or payment information is processed or stored</p>
+                
                  <p className={`
                  text-white
               `}>Questions? Call 0800 861 997 (Toll-Free)</p>
