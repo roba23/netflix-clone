@@ -92,9 +92,12 @@ export function Homepage(prop){
                 <h3 className={`
                     lg:font-bold
                     lg:text-[18px]
+                    font-extrabold
                     `}>Disclaimer.</h3>
                 <h3 className={`
                     lg:text-[18px]
+                    font-bold
+                    text-[16px]
                     `}>This is a non-commercial, personal portfolio project built purely for educational purposes. This website is not affiliated with, authorized, or endorsed by Netflix. No real user data or payment information is processed or stored</h3>
                 <div className={`
                     flex
