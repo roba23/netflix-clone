@@ -40,7 +40,7 @@ export default function Movies(prop){
             }
         }
         
-        if(prop.user.success)
+        if(prop.user && prop.user.success)
             {
 
                 if(prop.user.status.subscription && (new Date(prop.user.status["expiration"]) > new Date())){
@@ -61,7 +61,7 @@ export default function Movies(prop){
     
     }, [search,prop.user, paymentForm])
     const cardElements = movies.map((elem,index)=>{
-       return <Card  imgUrl={elem.imgUrl} />
+       return <Card   imgUrl={elem.imgUrl} title={elem.name} description={elem.description} videoSrc={elem.trailer}/>
     })
     
     async function subscribe(e){

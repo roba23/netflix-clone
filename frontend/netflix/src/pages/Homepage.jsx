@@ -215,13 +215,54 @@ export function Homepage(prop){
                         
                         
                         `}>
-                            <Card imgUrl="https://thumb.wikimedia.org/wikipedia/en/thumb/7/73/Below_%282026%29_poster.jpg/250px-Below_%282026%29_poster.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail" num={1}/>
-                            <Card imgUrl="https://upload.wikimedia.org/wikipedia/en/6/6b/Beauty_in_Black_%28TV_series%29.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled" num={2} />   
-                            <Card imgUrl="https://upload.wikimedia.org/wikipedia/en/8/8d/72_Hours_%282026%29_poster.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled" num={3} />
-                            <Card imgUrl="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQk168L4pV88hjQlaiFrNjVMJoDiCJx9FDzNBZRbV5UMIAaIlkov5VZLho&s=10" num={4} />
-                            <Card imgUrl="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRaEw2seUkCUvnhnY0OkYcywjDDOTd1U4EmqWA7_1XZ4yEIRORON8IgwKD&s=10" num={5} />
-                            <Card imgUrl="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTU3z4B_R8A-6cKsFFRHDYqrFVIAJlENT6kSMjgTfZLdM4qANe_9t0VjAc&s=10" num={6} />
-                            <Card imgUrl="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7IEjgJdbUQbJB5J3U3WVKRR_9V14NFmrC3Uq425mKRR0sHqDaKZeaqJdi&s=10" num={7} />
+                            <Card  title="Below"
+                                description="When a mysterious sea creature terrorizes 
+                                a remote town, a fisherman must fight to protect his 
+                                family, his community, and his way of life."
+                                imgUrl="https://thumb.wikimedia.org/wikipedia/en/thumb/7/73/Below_%282026%29_poster.jpg/250px-Below_%282026%29_poster.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail" num={1}/>
+                            <Card title="Beauty in Black" 
+                                description="Two young women from opposite sides of the tracks 
+                                cross paths—as one tries to survive her day to day as a stripper 
+                                who is stuck hostage with a violent pimp, the other runs a successful 
+                                hair care (relaxer) company with dysfunctional in-laws 
+                                and is trapped in a loveless marriage."
+                                imgUrl="https://upload.wikimedia.org/wikipedia/en/6/6b/Beauty_in_Black_%28TV_series%29.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled" num={2} />   
+                            <Card 
+                                title="72 Hours"
+                                description="A 40-year-old executive ends 
+                                up at a three-day bachelor party with 
+                                twenty-somethings after being mistakenly 
+                                included in their chat group."
+                                imgUrl="https://upload.wikimedia.org/wikipedia/en/8/8d/72_Hours_%282026%29_poster.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled" num={3} />
+                            <Card 
+                                title="Friends"
+                                description="The personal and professional 
+                                lives of six friends living in the Manhattan 
+                                borough of New York City."
+                                imgUrl="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQk168L4pV88hjQlaiFrNjVMJoDiCJx9FDzNBZRbV5UMIAaIlkov5VZLho&s=10" num={4} />
+                            <Card 
+                                imgUrl="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRaEw2seUkCUvnhnY0OkYcywjDDOTd1U4EmqWA7_1XZ4yEIRORON8IgwKD&s=10" num={5}
+                                title="The Mentalist"
+                                description='Famous "psychic" Patrick Jane outs himself as a fake, 
+                                and using his heightened observational skills and impeccable knowledge 
+                                of the human psyche, he works with the police so he can find "Red John", 
+                                the madman who killed his family.'
+                                 />
+                            <Card 
+                                imgUrl="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTU3z4B_R8A-6cKsFFRHDYqrFVIAJlENT6kSMjgTfZLdM4qANe_9t0VjAc&s=10" num={6}
+                                title="Animals"
+                                description="Desperate to pay their son's ransom, 
+                                a mayoral candidate and his wife resort to extreme 
+                                measures, revealing dark secrets they never intended 
+                                to bring to light."
+                             />
+                            <Card 
+                                imgUrl="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7IEjgJdbUQbJB5J3U3WVKRR_9V14NFmrC3Uq425mKRR0sHqDaKZeaqJdi&s=10" num={7}
+                                title="A Different World"
+                                description="Deborah Wayne enters her freshman year 
+                                at Hillman College, her parents' HBCU alma mater, 
+                                where she must escape their shadow and build her own legacy."
+                                 />
                         </div>
                             <button
                             onClick={()=> scroll(500)}
